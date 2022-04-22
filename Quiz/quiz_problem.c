@@ -14,14 +14,14 @@ int main(void){
     double x_over_y = x/y;
     double equation = (y + x_over_y)/2;
 
-    printf("x %c y %c         x/y %c         1/2(y + (x/y))", TAB, TAB, TAB);
+    printf("x %c y %c         x/y %c         1/2(y + (x/y)%c", TAB, TAB, TAB, NEWLINE);
+    printf("%d %c %lf %c %lf %c %lf %c", x, TAB, y, TAB, x_over_y, TAB, equation, NEWLINE);
     
-    printf("%c", NEWLINE);
     while (fabs(equation - y) >= tolerance){
-        printf("%d %c %lf %c %lf %c %lf %c", x, TAB, y, TAB, x_over_y, TAB, equation, NEWLINE);
         y = fabs(equation);
         x_over_y = x/y;
         equation = (y + x_over_y)/2;
+        printf("%d %c %lf %c %lf %c %lf %c", x, TAB, y, TAB, x_over_y, TAB, equation, NEWLINE);
     }
 
     return 0;
