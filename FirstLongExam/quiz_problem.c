@@ -14,8 +14,10 @@ int main(void){
 
     double x_over_y = x/y;                  //Formula for x/y
     double equation = (y + x_over_y)/2;     //Formula for square root of a positive number
-
+    
+    //Header
     printf("x %c y %c         x/y %c         1/2(y + (x/y)%c", TAB, TAB, TAB, NEWLINE);
+    //First Content
     printf("%d %c %lf %c %lf %c %lf %c", x, TAB, y, TAB, x_over_y, TAB, equation, NEWLINE);
     
     while (fabs(equation - y) >= tolerance){
@@ -27,7 +29,7 @@ int main(void){
         x_over_y = x/y;                     
         equation = (y + x_over_y)/2;        
 
-        //Print the Table
+        //Add Values to the Table
         printf("%d %c %lf %c %lf %c %lf %c", x, TAB, y, TAB, x_over_y, TAB, equation, NEWLINE);
     }
 
